@@ -1,0 +1,35 @@
+<br />
+<div class="card">
+  <div class="card-header">
+    <h4>Editing Friend</h4>
+  </div>
+  <div class="card-body">
+    
+    <% if user_signed_in? %>
+
+
+	
+  
+
+
+  <%= render 'form', friend: @friend %>
+<br />
+<%= link_to 'Show', @friend, class:'btn btn-secondary' %> 
+<%= link_to 'Back', friends_path, class:'btn btn-secondary'  %>
+
+<%= link_to 'Delete', @friend, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger" %>
+
+</table>
+<% else %>
+<h2>Sorry, you are not allowed to edit from this page</h2>
+<% end %>
+
+  </div>
+</div>
+
+
+
+
+
+
+

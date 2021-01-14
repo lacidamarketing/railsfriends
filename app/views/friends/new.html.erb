@@ -1,0 +1,17 @@
+<% if user_signed_in? %>
+<br />
+<div class="card">
+  <div class="card-header">
+    New Friend
+  </div>
+  <div class="card-body">
+    <%= render 'form', friend: @friend %><br>
+
+	<%= link_to 'Back', friends_path,class:"btn btn-primary" %>
+	<% else %>
+	<h2>Sorry you are not allowed to visit this page</h2>
+<% end %>
+  </div>
+</div>
+
+

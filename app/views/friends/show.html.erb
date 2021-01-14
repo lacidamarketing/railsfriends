@@ -1,0 +1,49 @@
+
+
+<% if user_signed_in? %>
+
+<br />
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h1 class="card-title">
+
+<strong><%= @friend.first_name + " " + @friend.last_name %></strong></strong>
+  
+
+
+</h1>
+
+    <p class="card-text">
+
+
+
+
+<p>
+  <strong>Email: <%= @friend.email %></strong>
+ 
+</p>
+
+<p>
+  <strong>Phone: <%= @friend.phone %></strong>
+  
+</p>
+
+<p>
+  <strong>Twitter: <%= @friend.twitter %></strong>
+  
+</p>
+
+<%= link_to 'Edit', edit_friend_path(@friend),class:"btn btn-secondary" %> 
+<%= link_to 'Back', friends_path,class:"btn btn-secondary" %>
+
+
+    </p>
+
+
+  </div>
+</div>
+
+<% else %>
+<h2>Sorry you are not allowed to visit this page</h2>
+<% end %>
